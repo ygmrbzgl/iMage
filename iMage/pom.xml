@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>edu.kit.ipd.swt1.ss2018</groupId>
+    <artifactId>uebungsparent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>swt1</groupId>
+  <artifactId>iMage</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>iMage</name>
+<repositories>
+ <repository>
+ <id>ipdNexus</id>
+ <url>http://bob.ipd.kit.edu/nexus/content/repositories/swt1</url>
+ </repository>
+</repositories>
+</project>
+<?xml version="1.0"?>
+
+-<assembly xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2">
+
+<id>src</id>
+
+<includeBaseDirectory>false</includeBaseDirectory>
+
+
+-<formats>
+
+<format>zip</format>
+
+</formats>
+
+
+-<fileSets>
+
+
+-<fileSet>
+
+
+-<includes>
+
+<include>pom.xml</include>
+
+</includes>
+
+</fileSet>
+
+
+-<fileSet>
+
+<directory>src</directory>
+
+</fileSet>
+
+
+-<fileSet>
+
+<directory>target</directory>
+
+
+-<includes>
+
+<include>changelog.xml</include>
+
+<include>changelog.html</include>
+
+</includes>
+
+<outputDirectory>docs</outputDirectory>
+
+</fileSet>
+
+</fileSets>
+
+</assembly>
